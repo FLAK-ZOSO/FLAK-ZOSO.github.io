@@ -18,6 +18,7 @@ FLAK-ZOSO.github.io/
 |   |    ├── code.css
 |   |    ├── icons.css
 |   |    ├── input.css
+|   |    ├── mobile.css
 |   |    ├── paragraph.css
 |   |    └── sidebar.css
 |   |    
