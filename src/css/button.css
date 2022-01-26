@@ -1,0 +1,68 @@
+.copy {
+    border-radius: 5px;
+    margin-bottom: 0.5%;
+    margin-top: 0.5%;
+    align-self: center;
+    width: 20px;
+    height: 20px;
+}
+.copy:hover {
+    transform: scale(1.2);
+}
+
+
+.submit {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font: bolder;
+    width: max-content;
+    padding-bottom: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    background-color: black;
+    color: red;
+}
+
+
+.rainbow {
+    width: 90%;
+    align-self: center;
+    height: 20px;
+}
+.rainbow:hover {
+    transform: scale(1, 1.2);
+}
+
+
+button.copypaste {
+    background-color: rgb(49, 49, 49);
+    border-radius: 5px;
+    color: lime;
+    margin-top: 1%;
+    width: max-content;
+    height: max-content;
+}
+button.copypaste:hover {
+    transform: scale(1.2);
+}
+
+
+button.download {
+    width: max-content;
+    padding-bottom: 3px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    background-color: black;
+    margin-left: 48%;
+}
+button.download a {
+    color: red;
+    font: 800;
+    font-size: xx-large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+}
+button.download :hover {
+    color: blue;
+}

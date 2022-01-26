@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META -->
+        <meta charset="UTF-8">
+        <meta name="author" content="FLAK-ZOSO">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="description" content="Tris.py explaination">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- TITLE -->
+        <title>Tris</title>
+
+        <!-- ICONS -->
+        <link rel="icon" type="ico" sizes="32x32" href="../../../img/favicon.ico">
+
+        <!-- STYLE -->
+        <link rel="stylesheet" href="../../css/button.css">
+        <link rel="stylesheet" href="../../css/code.css">
+        <link rel="stylesheet" href="../../css/icons.css">
+        <link rel="stylesheet" href="../../css/paragraph.css">
+        <script src="https://kit.fontawesome.com/f909269b75.js" crossorigin="anonymous"></script>
+        <style>#body {background-color: rgb(255, 60, 0);}</style>
+
+        <!-- SCRIPT -->
+        <script type="text/javascript" src="../../js/onStart.js"></script>
+    </head>
+
+    <body id="body">
+        <div class="intro">
+            <h1>Tris</h1><hr>
+            <p><code class="square">Tris</code> is a Python project stored in a <code class="square">repository</code> on <code class="square">GitHub</code></p>
+        </div>
+
+        <div class="intro">
+            <h1>Code</h1><hr>
+            <p><code class="square">Tris.py</code> stores the moves of each match in a <code class="square">.json</code> file, like this:</p>
+            <pre class="js">
+    {
+        <code class="string">"69"</code>: [<code class="string">"1"</code>, <code class="string">"3"</code>, <code class="string">"4"</code>, <code class="string">"2"</code>, <code class="string">"7"</code>, <code class="blue">null</code>, <code class="blue">null</code>, <code class="blue">null</code>, <code class="blue">null</code>, <code class="blue">false</code>]
+    }
+            </pre>
+            <p>The matches storage is better explained <a href="https://github.com/FLAK-ZOSO/Tris/wiki/Wrong-games" target="_blank"><code class="square">here</code></a> in the Wiki</p>
+        </div>
+
+        <div class="intro">
+            <h1>Usage</h1><hr>
+            <p><code class="square">Tris.py</code> can be simply used to play <code class="square">Tic-Tac-Toe</code> against <code class="square">AI</code></p><hr>
+            <p><a href="../../../img/Tris game.png" target="_blank"><code class="square">Here</code></a>'s an example of a game</p>
+        </div>
+
+        <div class="intro">
+            <h1><img src="../../../img/Python-logo.ico" width="50px"></h1><hr>
+            <p>The code was written with <code class="square">Python 3.9.1</code>, but can be used with <code class="square">Python 3.8+</code> without bugs</p>
+            <p>The <code class="square">Tris.py</code> files uses the <code class="square">:=</code> operator, so it will raise a <code class="square">SyntaxError</code> if executed with older versions</p>
+            <p>The <code class="square">PyPi</code> version of the package was last tested with <code class="square">Python 3.9.1</code></p><hr>
+            <p>The code will be improved, adapted and optimized only on <code class="square">GitHub</code>, the <code class="square">PyPi</code> version of <code class="square">Tris.py</code> won't be updated</p>
+        </div>
+
+        <div class="intro">
+            <h1>Download</h1><hr>
+            <p>The package can be found in the <code class="square">TestPyPi</code> <a href="https://test.pypi.org/project/TrisPlayer/" target="_blank"><code class="square">here</code></a></p><hr>
+            <p>You can download it writing this in the <code class="square">cmd</code></p>
+            <pre class="cmd">
+                <button id="copy" class="copypaste"><i class="far fa-copy"></i></button><code id="pip">pip install -i https://test.pypi.org/simple/ TrisPlayer</code>
+            </pre><hr>
+            <p>You can get the <code class="square">.zip</code> of the latest version <a href="https://github.com/FLAK-ZOSO/Tris/releases" target="_blank"><code class="square">here</code></a></p><hr>
+            <p>You can get the <code class="square">main</code> file clicking <a href="https://raw.githubusercontent.com/FLAK-ZOSO/Tris/main/Tris.py" download="Tris.py"><code class="square">here</code></a></p>
+        </div>
+
+        <div class="intro">
+            <div class="madeWith"><p>Made with <b class="heart"><button id="heart" class="submit"><i class="fas fa-sync-alt fa-spin"></i></button></b> and <b>GitHub Pages</b></p></div>
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById('heart').addEventListener('click', function() {
+                document.getElementsByClassName('heart')[0].innerHTML = '&hearts;';
+            })
+        </script>
+
+        <!-- JavaScript to be loaded after  -->
+        <script>onStartTris();</script>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+/* Introduction of the pages */
+.intro {
+    background-color: black;
+    border: double gray 2px;
+    justify-content: center;
+    border-radius: 20px;
+    margin-bottom: 2%;
+    margin-right: auto;
+    margin-left: auto;
+    color: black;
+}
+.intro hr {
+    margin-right: 3%;
+    margin-left: 3%;
+}
+.intro h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: red;
+}
+.intro p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    color: red;
+}
+.intro a {
+    color: red;
+}
+.intro a:hover {
+    color: blue;
+}
+
+
+/* Footer of the pages */
+.footer {
+    background-color: rgb(19, 19, 19);
+    bottom: 0;
+    position: fixed;
+    height: max-content;
+    width: 81%;
+    margin-left: auto;
+    margin-top: 2%;
+    border-style: double gray 2px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    justify-content: center;
+}
+.footer p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    color: red;
+}
+
+
+/* Upper footer */
+.upperFooter {
+    background-color: rgb(19, 19, 19);
+    box-shadow: rgb(19, 19, 19);
+    z-index: 1;
+    top: 0;
+}

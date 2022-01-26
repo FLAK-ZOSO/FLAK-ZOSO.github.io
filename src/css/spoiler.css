@@ -1,0 +1,25 @@
+.spoiler {
+    background-color: red;
+    border-radius: 5px;
+    border-style: none;
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: inherit;
+    padding: 2px;
+}
+.spoiler:hover {
+    background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.after-spoiler {
+    background-color: rgb(42, 42, 42);
+    border-radius: 5px;
+    border-style: none;
+    color: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    padding-left: 2px;
+    padding-right: 2px;
+}

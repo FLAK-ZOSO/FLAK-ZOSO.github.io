@@ -1,0 +1,66 @@
+FLAK-ZOSO.github.io/
+|
+├── src/
+│   ├── js/
+|   |    ├── checkWidth.js
+|   |    ├── copyToCache.js
+|   |    ├── div.js
+|   |    ├── dropdown.js
+|   |    ├── importerHTML.js
+|   |    ├── onStart.js
+|   |    ├── openLink.js
+|   |    ├── sendEmail.js
+|   |    ├── setWidth.js
+|   |    └── sidebar.js
+│   |
+│   ├── css/
+|   |    ├── button.css
+|   |    ├── code.css
+|   |    ├── icons.css
+|   |    ├── input.css
+|   |    ├── paragraph.css
+|   |    └── sidebar.css
+|   |    
+│   ├── scss/
+|   |    └── code.scss
+|   |
+|   ├── .htaccess
+|   ├── email.html
+|   ├── index.html
+|   ├── mobile.html
+|   |
+|   ├── game/
+|   |     └── Click.html
+|   |
+|   └── repo/
+|         ├── Markdown/
+|         |     ├── about.html
+|         |     ├── v1.0.0.html
+|         |     └── v2.0.0.html
+|         |
+|         ├── Prompt/
+|         |     ├── about.html
+|         |     ├── v1.0.0.html
+|         |     └── v1.1.0.html
+|         |
+|         └── Tris/
+|               └── about.html
+|   
+├── img/
+|    ├── CMD run.png
+|    ├── CMD run v1.1.0.png
+|    ├── favicon.ico
+|    ├── background.png
+|    ├── HTML5.ico
+|    ├── HTML5.png
+|    ├── JavaScript-logo.ico
+|    ├── JavaScript-logo.png
+|    ├── Markdown.png
+|    ├── JavaScript-logo.png
+|    ├── Python-logo.ico
+|    ├── Python-logo.png
+|    ├── Tris game.png
+|    └── Windows-logo.ico
+|
+├── Tree.txt
+└── index.html

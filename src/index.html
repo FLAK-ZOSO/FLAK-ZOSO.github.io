@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <!-- META -->
+        <meta charset="UTF-8">
+        <meta name="author" content="FLAK-ZOSO">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="description" content="Main page">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- TITLE -->
+        <title>FLAK-ZOSO</title>
+
+        <!-- ICONS -->
+        <link rel="icon" type="ico" sizes="32x32" href="../img/favicon.ico">
+
+        <!-- Style -->
+        <link rel="stylesheet" href="css/button.css">
+        <link rel="stylesheet" href="css/code.css">
+        <link rel="stylesheet" href="css/icons.css">
+        <link rel="stylesheet" href="css/input.css">
+        <link rel="stylesheet" href="css/paragraph.css">
+        <link rel="stylesheet" href="css/sidebar.css">
+        <link rel="stylesheet" href="css/spoiler.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- CSS -->
+        <style>
+            #body {
+                background-color: rgb(255, 60, 0);
+            }
+        </style>
+
+        <!-- JavaScript -->
+        <script type="text/javascript" src="js/checkWidth.js"></script>
+        <script type="text/javascript" src="js/copyToCache.js"></script>
+        <script type="text/javascript" src="js/div.js"></script>
+        <script type="text/javascript" src="js/dropdown.js"></script>
+        <script type="text/javascript" src="js/onStart.js"></script>
+        <script src="https://kit.fontawesome.com/f909269b75.js" crossorigin="anonymous"></script>
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    </head>
+
+    <body id="body">
+        <!-- #Sidebar -->
+        <div id="sidebar" class="sidenav">
+            <a id="closebtn" href="javascript:void(0)" class="closebtn" onclick="closeBar('sidebar', 'madeWith', 'dataTreatment', 'github', 'intro', 'code', 'skills', 'games'); hide('sidebar')">
+                <p class="cross">&times;</p>
+            </a>
+            <br>
+            <!-- Internal Pages -->
+            <button class="dropdown-btn" onclick="gruppo('contenitore1');">
+                Internal Pages<i class="fa fa-caret-down"></i>
+            </button>
+            <div id="contenitore1" class="dropdown-container">
+                <ul style="color: lime;">
+                    <li><a href="index.html" target="_blank">Main page</a></li>
+                </ul>
+            </div>
+            <!-- Repositories -->
+            <button class="dropdown-btn" onclick="gruppo('contenitore2');">
+                Repositories<i class="fa fa-caret-down"></i>
+            </button>
+            <div id="contenitore2" class="dropdown-container">
+                <ul style="color: lime;">
+                    <li><a href="repo/Tris/about.html" target="_blank">Tris</a></li>
+                    <li><a href="repo/Prompt/about.html" target="_blank">Prompt</a></li>
+                    <li><a href="repo/Markdown/about.html" target="_blank">Markdown</a></li>
+                </ul>
+            </div>
+            <!-- Games -->
+            <button class="dropdown-btn" onclick="gruppo('contenitore3');">
+                Games<i class="fa fa-caret-down"></i>
+            </button>
+            <div id="contenitore3" class="dropdown-container">
+                <ul style="color: lime;">
+                    <li>
+                        <a href="game/click.html" target="_blank">Click</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Social -->
+            <button class="dropdown-btn" onclick="gruppo('contenitore4');">
+                Social<i class="fa fa-caret-down"></i>
+            </button>
+            <div id="contenitore4" class="dropdown-container">
+                <ul style="color: lime;">
+                    <li>
+                        <a href="email.html" target="_blank">E-mail</a>
+                    </li>
+                    <li>
+                        <a href="https://discord.com/channels/@me/797844636281995274" target="_blank">Discord</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- #Sidebar -->
+
+        <!-- #Introduction -->
+        <div id="intro" class="intro">
+            <h1>FLAK-ZOSO</h1>
+            <hr>
+            <p>Welcome to this bad-looking website</p>
+        </div>
+        <!-- #Introduction -->
+
+        <!-- #Skills -->
+        <div id="skills" class="intro">
+            <h1>Coding skills</h1>
+            <hr>
+            <p>
+                This <code class="square">div</code>
+                would seem too empty if filled with my actual skills...
+            </p>
+            <div class="icons">
+                <a href="https://python.org" target="_blank">
+                    <img class="icon" src="../img/Python-logo.ico">
+                </a>
+                <a href="https://html.spec.whatwg.org" target="_blank">
+                    <img class="icon" src="../img/HTML5.ico">
+                </a>
+                <a href="https://www.javascript.com" target="_blank">
+                    <img class="icon" src="../img/JavaScript-logo.ico">
+                </a>
+            </div>
+            <p>...so I put random logos found in the net</p>
+        </div>
+        <!-- #Skills -->
+
+        <!-- GitHub -->
+        <div id="github" class="intro">
+            <h1>GitHub stats</h1>
+            <hr>
+            <div class="code">
+                <a href="https://github.com/anuraghazra/github-readme-stats">
+                    <img style="margin-left: 1.5%; margin-top: 1%; margin-bottom: 1%;" src="https://github-readme-stats.vercel.app/api?username=FLAK-ZOSO&show_icons=true&theme=dark&count_private=true">
+                </a>
+            </div>
+            <br>
+            <div class="code">
+                <a href="https://github.com/FLAK-ZOSO">
+                    <img style="margin-left: 16%;" src="https://github-readme-stats.vercel.app/api/top-langs/?username=FLAK-ZOSO&layout=compact&&count_private=true&theme=dark">
+                </a>
+            </div>
+            <hr>
+            <p>
+                Thanks to <a href="https://anuraghazra.dev">Anurag Hazra</a>
+                for his <a href="https://github.com/anuraghazra">github stats</a>
+            </p>
+            <hr>
+            <div class="code centered">
+                <img class="rounded" width="600em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=flak-zoso&layout=compact&langs_count=999&include_all_commits=true&hide_progress=true&hide_border=true&theme=dark&hide=">
+                <br>
+                <a href="https://profile.codersrank.io/user/flak-zoso#Tech%20Skills">
+                    <img class="rounded" width="600em" src="https://cr-skills-chart-widget.azurewebsites.net/api/api?username=flak-zoso&labels=true&legend=true&tooltip=true&max-labels=24&branding=false&bg=%23151515">
+                </a>
+            </div>
+        </div>
+
+        <!-- #Code -->
+        <div id="code" class="intro">
+            <h1>Code</h1>
+            <hr>
+            <p>Just some random code to make the page look more colorful...</p>
+            <pre class="js">
+                <span class="blue">function</span> <span class="name">GunsNRoses</span> (<span class="variable">whoKnows</span> ) {
+                    <span class="comment">// Live and</span>
+                    <span class="blue">let</span> <span class="variable">die</span>;
+                    <span class="statement">return</span> <span class="blue">true</span>;
+                }
+            </pre>
+        </div>
+        <!-- #Code -->
+
+        <!-- #Fun -->
+        <div id="games" class="intro">
+            <h1>Games</h1>
+            <p>This page is so boring that I decided to put some games...</p>
+            <hr>
+            <h1>Copy!</h1>
+            <p>Have you ever seen something more useless than some clickable traffic lights?</p>
+            <div class="icons" style="width: 30px; margin-left: auto; margin-right: auto;">
+                <button id="green" class="copy" type="button"></button><br>
+                <button id="yellow" class="copy" type="button"></button><br>
+                <button id="red" class="copy" type="button"></button>
+                <style>
+                    #red {
+                        background-color: #ff0000;
+                        margin-bottom: 5px;
+                    }
+                    #yellow {
+                        background-color: #ffff00;
+                    }
+                    #green {
+                        background-color: #00ff00;
+                        margin-top: 5px;
+                    }
+                </style>
+                <script>
+                    document.getElementById('green').addEventListener('click', function(event) {
+                        copy('#00ff00');
+                    })
+                    document.getElementById('yellow').addEventListener('click', function(event) {
+                        copy('#ffff00');
+                    })
+                    document.getElementById('red').addEventListener('click', function(event) {
+                        copy('#ff0000');
+                    })
+                </script>
+            </div>
+            <p>I hope you haven't.</p>
+            <hr>
+            <h1>Sidebar</h1>
+            <p>
+                Have you ever closed a sidebar without knowing how to make it appear?<br>In that case this buttons will help you!
+            </p>
+            <div id="sidebar game" class="icons" style="width: 22%; margin-left: auto; margin-right: auto;">
+                <button id="closeBar" class="submit" type="button">Close</button>
+                <button id="openBar" class="submit" type="button">Open</button>
+                <button id="showBar" class="submit" type="button">Show</button>
+                <button id="hideBar" class="submit" type="button">Hide</button>
+                <script>
+                    document.getElementById('closeBar').addEventListener('click', function(event) {
+                        document.getElementById('closebtn').click();
+                        document.getElementById('sidebar game').style.width = "18%";
+                        console.log(`The closeBar button was clicked.`);
+                        console.count(`closeBar`);
+                    })
+                    document.getElementById('openBar').addEventListener('click', function(event) {
+                        setWidth();
+                        show('sidebar')
+                        document.getElementById('sidebar game').style.width = "22%";
+                        console.log(`The openBar button was clicked.`);
+                        console.count(`openBar`);
+                    })
+                    document.getElementById('showBar').addEventListener('click', function(event) {
+                        show('sidebar');
+                        console.log(`The showBar button was clicked.`);
+                        console.count(`showBar`);
+                    })
+                    document.getElementById('hideBar').addEventListener('click', function(event) {
+                        hide('sidebar');
+                        console.log(`The hideBar button was clicked.`);
+                        console.count(`hideBar`);
+                    })
+                </script>
+            </div>
+            <hr>
+            <h1>Write!</h1>
+            <p id="question">
+                Have you ever seen the usage of <code class="square">window.prompt()</code>?
+            </p>
+            <div id="questions" class="icons" style="width: 35%; margin-left: auto; margin-right: auto;">
+                <button id="promptQuestion" class="submit" type="button">Have you ever used window.prompt()?</button>
+                <p id="promptAnswer" style="display: none;"></p>
+                <script>
+                    document.getElementById('promptQuestion').addEventListener('click', function(event) {
+                        let answer = window.prompt('Have you ever used window.prompt()?');
+                        let output = document.getElementById('promptAnswer');
+                        output.innerHTML = answer;
+                        output.style = "color: blue; margin-top: 0; display: block;";
+                        console.log('The first question was answered.');
+
+                        let button = document.createElement('button');
+                        button.id = 'deleteAnswer';
+                        button.className = 'submit';
+                        button.addEventListener('click', function(event) {
+                            this.remove();
+                            document.getElementById('questions').remove();
+                            console.log('Succesfully deleted the div.');
+                            document.getElementById('question').innerHTML = 'Have you ever seen a <code class="square">div</code> disappearing?';
+                        })
+                        button.innerHTML = 'Have you ever deleted a div?';
+                        document.getElementById('questions').append(button)
+                        document.getElementById('deleteAnswer').scrollIntoView();
+                    })
+                </script>
+            </div>
+            <hr>
+            <h1>Alert!</h1>
+            <p id="introAlert">
+                You have recieved several <code class="square">alert</code>
+                s in your life but...
+            </p>
+            <div id="alertDiv" class="icons" style="width: 20%; margin-left: auto; margin-right: auto;">
+                <input id="sentence" class="textInput" type="text" placeholder="Insert alert content here..." style="width: 70%;">
+                <br>
+                <button id="alert" class="submit" type="button">Send!</button>
+                <script>
+                    document.getElementById('alert').addEventListener('click', function(event) {
+                        let sentence = document.getElementById('sentence');
+                        alert(sentence.value);
+                        sentence.value = '';
+                        sentence.addEventListener('focus', function(event) {
+                            let sobstitute = document.createElement('p');
+                            sobstitute.innerHTML = 'DISAPPEARED!';
+                            document.getElementById('alertDiv').replaceWith(sobstitute);
+                        })
+                    })
+                </script>
+            </div>
+            <p>...have you ever decided its content?</p>
+            <hr>
+            <h1 id="rainbow">Rainbow!</h1>
+            <p id="rainbowText1">You haven't found the copy-traffic-lights useless enough?</p>
+            <div class="icons" style="background-color: black; width: 50%; margin-left: auto; margin-right: auto;">
+                <button class="rainbow" style="background-color: red; border-top-left-radius: 10px; border-top-right-radius: 10px;"></button>
+                <button class="rainbow" style="background-color: orange;"></button>
+                <button class="rainbow" style="background-color: yellow;"></button>
+                <button class="rainbow" style="background-color: lime;"></button>
+                <button class="rainbow" style="background-color: aqua;"></button>
+                <button class="rainbow" style="background-color: blue;"></button>
+                <button class="rainbow" style="background-color: blueviolet; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;"></button>
+                <script>
+                    Array.from(document.getElementsByClassName('rainbow')).forEach(element=>{
+                        element.addEventListener('click', function(event) {
+                            let list = [document.getElementById('rainbow'), document.getElementById('rainbowText1'), document.getElementById('rainbowText2')]
+                            list.forEach(e=>{
+                                e.style.color = element.style.backgroundColor;
+                            }
+                            )
+                        })
+                    }
+                    )
+                </script>
+            </div>
+            <p id="rainbowText2">Here you got a RAINBOW!</p>
+            <hr>
+            <h1>Spoiler</h1>
+            <p>Maybe you didn't know that <button class="spoiler">in Titanic Jack dies</button></p>
+        </div>
+        <!-- #Fun -->
+
+        <!-- #DataTreatment -->
+        <div id="dataTreatment" class="intro">
+            <h1>Data Treatment</h1>
+            <hr>
+            <h1>Clipboard</h1>
+            <p>Did you know that most sites stole your cache's content?</p>
+            <div id="stoleDiv" class="icons" style="width: 40%; margin-left: auto; margin-right: auto;">
+                <button id="stoler" class="submit" type="button">Check your cache!</button>
+                <script>
+                    document.getElementById('stoler').addEventListener('click', function(event) {
+                        let output = document.createElement('p');
+                        output.innerHTML = 'loading...';
+                        setTimeout(()=>{
+                            output.innerHTML = navigator.clipboard.readText();
+                        }
+                        , 5000);
+                        this.replaceWith(output);
+                    })
+                </script>
+            </div>
+            <p>But we're not able to do this. Now you feel safe, right?</p>
+        </div>
+        <!-- #DataTreatment -->
+
+        <div id="madeWith" class="intro">
+            <div class="madeWith">
+                <p>
+                    Made with 
+                    <b class="heart">
+                        <button id="heart" class="submit">
+                            <i class="fas fa-sync-alt fa-spin"></i>
+                        </button>
+                    </b>
+                    and <b>GitHub Pages</b>
+                </p>
+            </div>
+        </div>
+        <script type="text/javascript">
+            document.getElementById('heart').addEventListener('click', function() {
+                document.getElementsByClassName('heart')[0].innerHTML = '&hearts;';
+            })
+        </script>
+
+        <!-- JavaScript to be loaded after the rest of the page -->
+        <script type="text/javascript" src="js/spoiler.js"></script>
+        <script type="text/javascript">
+            window.addEventListener("load", function(event) {
+                setWidth();
+            });
+            window.addEventListener('resize', checkWidth);
+        </script>
+    </body>
+</html>

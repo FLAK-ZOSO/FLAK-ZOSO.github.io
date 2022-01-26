@@ -1,0 +1,13 @@
+.icons {
+    background-color: rgb(49, 49, 49);
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-style: double;
+    border-radius: 30px;
+}
+.icon {
+    margin-left: 3.5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}

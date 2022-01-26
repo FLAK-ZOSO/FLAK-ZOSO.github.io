@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META -->
+        <meta charset="UTF-8">
+        <meta name="author" content="FLAK-ZOSO">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="description" content="Click">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- TITLE -->
+        <title>Click</title>
+
+        <!-- ICONS -->
+        <link rel="icon" type="ico" sizes="32x32" href="../../img/favicon.ico">
+
+        <!-- Style -->
+        <link rel="stylesheet" href="../css/button.css">
+        <link rel="stylesheet" href="../css/code.css">
+        <link rel="stylesheet" href="../css/paragraph.css">
+
+        <!-- CSS -->
+        <style>
+            body {
+                background-color: rgb(255, 60, 0);
+            }
+            button {
+                height: max-content;
+                width: max-content;
+            }
+            i {
+                margin-bottom: 5%;
+                margin-left: 5%;
+                margin-right: 5%;
+                margin-top: 5%;
+            }
+
+            .intro button {
+                margin-left: 47%;
+            }
+        </style>
+
+        <!-- JavaScript -->
+        <script src="https://kit.fontawesome.com/f909269b75.js" crossorigin="anonymous"></script>
+    </head>
+    
+    <body>
+        <div class="madeWith">
+            <button name="heart" class="submit">
+                <i class="fas fa-sync-alt fa-spin fa-10x"></i>
+            </button>
+            <button name="heart" class="submit">
+                <i class="fas fa-sync-alt fa-spin fa-10x"></i>
+            </button>
+            <button name="heart" class="submit">
+                <i class="fas fa-sync-alt fa-spin fa-10x"></i>
+            </button>
+            <button name="heart" class="submit">
+                <i class="fas fa-sync-alt fa-spin fa-10x"></i>
+            </button>
+            <button name="heart" class="submit">
+                <i class="fas fa-sync-alt fa-spin fa-10x"></i>
+            </button>
+            <button name="heart" class="submit">
+                <i class="fas fa-sync-alt fa-spin fa-10x"></i>
+            </button>
+            <button name="heart" class="submit">
+                <i class="fas fa-sync-alt fa-spin fa-10x"></i>
+            </button>
+            <button name="heart" class="submit">
+                <i class="fas fa-sync-alt fa-spin fa-10x"></i>
+            </button><br>
+        </div>
+
+        <div class="intro">
+            <button id="click" class="submit">CLICK ALL</button>
+        </div>
+        
+        <script type="text/javascript">
+            document.getElementById('click').addEventListener('click', function() {
+                Array.from(document.getElementsByName('heart')).forEach(button => {
+                    button.click();
+                })
+            })
+
+            window.addEventListener('load', function() {
+                div = document.getElementsByTagName('div')[0];
+                buttons = div.innerHTML;
+                for (let i = 0; i < 2; i++)
+                    div.innerHTML += buttons;
+                transformation();
+            })
+
+            function transformation() {
+                Array.from(document.getElementsByName('heart')).forEach(button => {
+                    button.addEventListener('click', function() {
+                        b = document.createElement('b');
+                        b.innerHTML = '&heartsuit;';
+                        b.classList.add('heart');
+                        b.classList.add('fas');
+                        b.classList.add('fa-spin');
+                        b.style.color = 'black';
+                        b.style.fontSize = '240px';
+                        this.replaceWith(b);
+
+                        if (document.getElementsByName('heart').length == 0) {
+                            console.log('All the buttons have been clicked');
+
+                            for (let i=0; i<1000; i++) {
+                                if (i%2 == 0) {
+                                    document.getElementsByTagName('body')[0].style.backgroundColor = 'red';
+                                    Array.from(document.getElementsByTagName('b')).forEach(heart => {
+                                        heart.style.backgroundColor = 'black';
+                                    })
+                                }
+                                else {
+                                    document.getElementsByTagName('body')[0].style.backgroundColor = 'black';
+                                    Array.from(document.getElementsByTagName('b')).forEach(heart => {
+                                        heart.style.backgroundColor = 'red';
+                                    })
+                                }
+                            }
+                        }
+                    })
+                });
+            }
+        </script>
+    </body>
+</html>
