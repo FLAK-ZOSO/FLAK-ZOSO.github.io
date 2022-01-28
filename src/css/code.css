@@ -187,3 +187,26 @@
 .madeWith b.heart {
     font-size: xx-large;
 }
+
+
+.madeWithMobile {
+    height: fit-content;
+    padding-bottom: 0;
+    color: red;
+}
+.madeWithMobile p {
+    background-color: rgb(49, 49, 49);
+    border-radius: 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: medium;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 0%;
+    padding-bottom: 2%;
+    width: 70vw;
+}
+.madeWithMobile b.heart {
+    font-size: xx-large;
+}
