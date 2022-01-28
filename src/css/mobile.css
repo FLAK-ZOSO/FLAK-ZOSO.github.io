@@ -18,6 +18,8 @@ hr {
     min-width: 80%;
     margin-left: 3%;
     margin-right: 3%;
+    margin-top: 0;
+    top: 0;
 }
 
 
@@ -40,14 +42,20 @@ section.bubble {
     position: relative;
     border-top-left-radius: 50% 20%;
     border-top-right-radius: 50% 20%;
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
     bottom: 0;
     height: 40%;
     width: 100%;
 }
 section.bubble p {
-    display: flex;
     align-self: stretch;
+    display: flex;
+    font-weight: 500;
     justify-content: space-around;
+    margin-bottom: 10%;
+    margin-left: 9vw;
+    margin-right: 9vw;
 }
 section.bubble.red h1, section.bubble.red p {
     color: black;
@@ -109,3 +117,26 @@ div.curve::after {
     border-bottom-right-radius: 20px;
     margin-bottom: 2vh;
 }
+
+
+/* CSS coming from https://shapedivider.app */
+/*
+.custom-shape-divider-bottom-1643376318 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+.custom-shape-divider-bottom-1643376318 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+.custom-shape-divider-bottom-1643376318 .shape-fill {
+    fill: #FFFFFF;
+}
+*/
