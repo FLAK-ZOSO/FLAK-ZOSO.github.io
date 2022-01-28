@@ -38,20 +38,22 @@ section.red {
 }
 section.bubble {
     position: relative;
-    background-color: red;
     border-top-left-radius: 50% 20%;
     border-top-right-radius: 50% 20%;
     bottom: 0;
     height: 40%;
     width: 100%;
 }
-section.bubble h1, section.bubble p {
-    color: black;
-}
 section.bubble p {
     display: flex;
     align-self: stretch;
     justify-content: space-around;
+}
+section.bubble.red h1, section.bubble.red p {
+    color: black;
+}
+section.bubble.black h1, section.bubble.black p {
+    color: red;
 }
 
 
