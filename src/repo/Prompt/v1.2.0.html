@@ -37,11 +37,12 @@
         <div class="intro">
             <h1>Download</h1><hr>
             <p>Here you can find the Windows download for both the minor version <code class="square">v1.2.0</code> and patch versions <code class="square">v1.2.z</code></p>
-            <ul style="width: 40%; margin-left: 33%; display: flex; align-items: center;">
+            <ul style="width: 40%; margin-left: 30%; display: flex; align-items: center;">
                 <li><a href="https://github.com/FLAK-ZOSO/Prompt/releases/tag/v1.2.0" target="_blank"><code class="square">v1.2.0</code></a> <button class="download"><a href="https://github.com/FLAK-ZOSO/Prompt/archive/refs/tags/v1.2.0.zip" target="_blank"><i class="fab fa-windows"></i></a></button></li>
                 <li><a href="https://github.com/FLAK-ZOSO/Prompt/releases/tag/v1.2.1" target="_blank"><code class="square">v1.2.1</code></a> <button class="download"><a href="https://github.com/FLAK-ZOSO/Prompt/archive/refs/tags/v1.2.1.zip" target="_blank"><i class="fab fa-windows"></i></a></button></li>
                 <li><a href="https://github.com/FLAK-ZOSO/Prompt/releases/tag/v1.2.2" target="_blank"><code class="square">v1.2.2</code></a> <button class="download"><a href="https://github.com/FLAK-ZOSO/Prompt/archive/refs/tags/v1.2.2.zip" target="_blank"><i class="fab fa-windows"></i></a></button></li>
                 <li><a href="https://github.com/FLAK-ZOSO/Prompt/releases/tag/v1.2.3" target="_blank"><code class="square">v1.2.3</code></a> <button class="download"><a href="https://github.com/FLAK-ZOSO/Prompt/archive/refs/tags/v1.2.3.zip" target="_blank"><i class="fab fa-windows"></i></a></button></li>
+                <li><a href="https://github.com/FLAK-ZOSO/Prompt/releases/tag/v1.2.4" target="_blank"><code class="square">v1.2.4</code></a> <button class="download"><a href="https://github.com/FLAK-ZOSO/Prompt/archive/refs/tags/v1.2.4.zip" target="_blank"><i class="fab fa-windows"></i></a></button></li>
             </ul>
         </div>
 
@@ -58,7 +59,7 @@
             <h1><code class="square">v1.2.1</code> Release notes <code class="square">31/1/2022</code></h1><hr>
             <p>Command <code class="square">echo</code> now reduces the spaces. <code class="square">echo Hello, World!</code> -> <code class="square">Hello, World!</code></p>
             <p>Function <code class="square">checkComments</code> and global variable <code class="square">comment</code> are now stored in <a href="https://github.com/FLAK-ZOSO/Prompt/blob/main/comments.py" target="_blank"><code class="square">comments.py</code></a></p>
-            <p>Fixed bug in <code class="square">checkComments</code>: now illimited comments per line are allowed</p>
+            <p>Fixed bug in <code class="square">checkComments</code>: now illimited comments per line are allowed</p><hr>
             <p>You can find the complete changelog <a href="https://github.com/FLAK-ZOSO/Prompt/compare/v1.2.0...v1.2.1" target="_blank"><code class="square">here</code></a></p>
         </div>
 
@@ -66,14 +67,21 @@
             <h1><code class="square">v1.2.2</code> Release notes <code class="square">31/1/2022</code></h1><hr>
             <p>Fixed bug in <code class="square">comments.py</code>, inserting <code class="square">*\</code> without a previous opening tag raised a <code class="square">RecursionError</code> after printing around <code class="square">989</code> times the <code class="square">[WARNING]</code></p>
             <p>Full error catching in command <code class="square">setVar</code> for invalid <code class="square">input</code>s</p>
-            <p>Full error catching in command <code class="square">move</code>, <code class="square">makeDir</code> and <code class="square">makeSource</code> for invalid <code class="square">input</code>s</p>
+            <p>Full error catching in commands <code class="square">move</code>, <code class="square">makeDir</code> and <code class="square">makeSource</code> for invalid <code class="square">input</code>s</p><hr>
             <p>You can find the complete changelog <a href="https://github.com/FLAK-ZOSO/Prompt/compare/v1.2.1...v1.2.2" target="_blank"><code class="square">here</code></a></p>
         </div>
 
         <div class="intro">
             <h1><code class="square">v1.2.3</code> Release notes <code class="square">31/1/2022</code></h1><hr>
-            <p>Fixed issue <a href="https://github.com/FLAK-ZOSO/Prompt/issues/26" target="_blank"><code class="square">#26</code></a> with pull request <a href="https://github.com/FLAK-ZOSO/Prompt/pull/27" target="_blank"><code class="square">#27</code></a>: relative path usage is now enabled via <a href="https://github.com/FLAK-ZOSO/Prompt/blob/d955fbd109ee030aea25ddb10bb12cc9516341c5/main.py#L17" target="_blank"><code class="square">os.chdir()</code></a></p>
+            <p>Fixed issue <a href="https://github.com/FLAK-ZOSO/Prompt/issues/26" target="_blank"><code class="square">#26</code></a> with pull request <a href="https://github.com/FLAK-ZOSO/Prompt/pull/27" target="_blank"><code class="square">#27</code></a>: relative path usage is now enabled via <a href="https://github.com/FLAK-ZOSO/Prompt/blob/d955fbd109ee030aea25ddb10bb12cc9516341c5/main.py#L17" target="_blank"><code class="square">os.chdir()</code></a></p><hr>
             <p>You can find the complete changelog <a href="https://github.com/FLAK-ZOSO/Prompt/compare/v1.2.2...v1.2.3" target="_blank"><code class="square">here</code></a></p>
+        </div>
+
+        <div class="intro">
+            <h1><code class="square">v1.2.4</code> Release notes <code class="square">31/1/2022</code></h1><hr>
+            <p>Full <code class="square">PermissionError</code> catching in commands <code class="square">makeFile</code>, <code class="square">makeSource</code> and <code class="square">makeDirectory</code></p>
+            <p>Function <code class="square">makeFile</code> now returns <code class="square">False</code> when a <code class="square">PermissionError</code> is raised, otherwise <code class="square">True</code></p><hr>  
+            <p>You can find the complete changelog <a href="https://github.com/FLAK-ZOSO/Prompt/compare/v1.2.3...v1.2.4" target="_blank"><code class="square">here</code></a></p>
         </div>
 
         <div class="intro">
