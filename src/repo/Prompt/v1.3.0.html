@@ -37,9 +37,10 @@
         <div class="intro">
             <h1>Download</h1><hr>
             <p>Here you can find the Windows download for both the minor version <code class="square">v1.3.0</code> and patch versions <code class="square">v1.3.z</code></p>
-            <ul style="width: 40%; margin-left: 41%; display: flex; align-items: center;">
+            <ul style="width: 40%; margin-left: 37%; display: flex; align-items: center;">
                 <li><a href="https://github.com/FLAK-ZOSO/Prompt/releases/tag/v1.3.0" target="_blank"><code class="square">v1.3.0</code></a> <button class="download"><a href="https://github.com/FLAK-ZOSO/Prompt/archive/refs/tags/v1.3.0.zip" target="_blank"><i class="fab fa-windows"></i></a></button></li>
                 <li><a href="https://github.com/FLAK-ZOSO/Prompt/releases/tag/v1.3.1" target="_blank"><code class="square">v1.3.1</code></a> <button class="download"><a href="https://github.com/FLAK-ZOSO/Prompt/archive/refs/tags/v1.3.1.zip" target="_blank"><i class="fab fa-windows"></i></a></button></li>
+                <li><a href="https://github.com/FLAK-ZOSO/Prompt/releases/tag/v1.3.2" target="_blank"><code class="square">v1.3.2</code></a> <button class="download"><a href="https://github.com/FLAK-ZOSO/Prompt/archive/refs/tags/v1.3.2.zip" target="_blank"><i class="fab fa-windows"></i></a></button></li>
             </ul>
         </div>
 
@@ -66,6 +67,16 @@
             <p>Removed dangerous and useless pointer to <code class="square">commands.commands</code> dictionary in <code class="square">perform.py</code></p>
             <p>Added help <code class="square">.txt</code> file for complex command <code class="square">directory</code></p><hr>
             <p>You can find the complete changelog <a href="https://github.com/FLAK-ZOSO/Prompt/compare/v1.3.0...v1.3.1" target="_blank"><code class="square">here</code></a></p>
+        </div>
+
+        <div class="intro">
+            <h1><code class="square">v1.3.2</code> Release notes <code class="square">3/2/2022</code></h1><hr>
+            <p>Improved efficiency in command <a href="https://github.com/FLAK-ZOSO/Prompt/blob/623d736e8579d3881f293b03a59bb0f1b634e5e9/commands.py#L38" target="_blank"><code class="square">close</code></a> by assigning <code class="square">variables.getCurrentPath()</code> and <code class="square">variables.getDefaultPath()</code> to variables to avoid new calls during the execution</p>
+            <p>Inline argument check for command <a href="https://github.com/FLAK-ZOSO/Prompt/blob/623d736e8579d3881f293b03a59bb0f1b634e5e9/commands.py#L72" target="_blank"><code class="square">setVar</code></a></p>
+            <p>Full error catching in command <code class="square">makeFile</code> for invalid <code class="square">input</code>s</p>
+            <p>Now also relative paths are capitalized, thanks to a <code class="square">.capitalize()</code> called in <a href="https://github.com/FLAK-ZOSO/Prompt/blob/623d736e8579d3881f293b03a59bb0f1b634e5e9/parsing.py#L37" target="_blank"><code class="square">parsing.path</code></a></p>
+            <p><code class="square">close</code> command is now handled as a normal command, and it takes a optional (and useless) positional argument to match <code class="square">perform.py</code>'s <a href="https://github.com/FLAK-ZOSO/Prompt/blob/623d736e8579d3881f293b03a59bb0f1b634e5e9/perform.py#L13" target="_blank"><code class="square">call</code></a></p><hr>
+            <p>You can find the complete changelog <a href="https://github.com/FLAK-ZOSO/Prompt/compare/v1.3.1...v1.3.2" target="_blank"><code class="square">here</code></a></p>
         </div>
 
         <div class="intro">
