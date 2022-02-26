@@ -1,0 +1,72 @@
+:root {
+    --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+p {
+    color: red;
+    align-self: center;
+    text-align: center;
+}
+
+
+button.spoiler {
+    background-color: red;
+    border-radius: 5px;
+    border-style: none;
+    color: red;
+    font-family: var(--font);
+    font-size: inherit;
+    padding: 1px;
+}
+button.spoiler:hover {
+    background-color: black;
+    font-family: var(--font);
+}
+button.after-spoiler {
+    background-color: rgb(42, 42, 42);
+    border-radius: 5px;
+    border-style: none;
+    color: red;
+    font-family: var(--font);
+    font-size: medium;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+
+.big {
+    font-family: var(--font);
+    font-size: x-large;
+}
+
+.bold {
+    font-family: var(--font);
+    font-weight: bold;
+}
+
+.code {
+    background-color: rgb(42, 42, 42);
+    border: 1px solid gray;
+    padding: 1px;
+}
+
+.italic {
+    font-family: var(--font);
+    font-style: italic;
+}
+
+.keyboard {
+    background-color: rgb(42, 42, 42);
+    border-radius: 5px;
+    color: red;
+    font-family: var(--font);
+    padding-bottom: 2px;
+}
+
+.underlined {
+    font-family: var(--font);
+    text-decoration: underline solid coral;
+}

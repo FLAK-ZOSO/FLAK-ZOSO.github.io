@@ -46,19 +46,18 @@ function _zip(keys, values) {
 }
 function _count(string_, chars) {
     // https://stackoverflow.com/a/4009771/15888601
-    return toString(string_).split(chars).length - 1;
+    return string_.split(chars).length - 1;
 }
 
 
 function _replace(text) {
     characters.forEach((value) => {
         console.log(value);
-        console.log(toString(text).indexOf(value));
-        while (toString(text).indexOf(value) > -1) {
-            text = toString(text).replace(value, opener[value]);
-            console.log(toString(text).replace(value, opener[value]));
-            text = toString(text).replace(value, closer[value]);
-            console.log(toString(text).replace(value, closer[value]));
+        for (let i=0; i<_count(text, value); i++) {
+            text = text.replace(value, opener[value]);
+            console.log(text.replace(value, opener[value]));
+            text = text.replace(value, closer[value]);
+            console.log(text.replace(value, closer[value]));
         }
         console.log(text);
     });
