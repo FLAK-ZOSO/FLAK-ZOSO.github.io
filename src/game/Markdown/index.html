@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META -->
+        <meta charset="UTF-8">
+        <meta name="author" content="FLAK-ZOSO">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="description" content="Markdown converter">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- TITLE -->
+        <title>Markdown</title>
+
+        <!-- ICONS -->
+        <link rel="icon" type="ico" sizes="32x32" href="../../../img/favicon.ico">
+
+        <!-- STYLE -->
+        <link rel="stylesheet" href="../../css/button.css">
+        <link rel="stylesheet" href="../../css/code.css">
+        <link rel="stylesheet" href="../../css/icons.css">
+        <link rel="stylesheet" href="../../css/input.css">
+        <link rel="stylesheet" href="../../css/paragraph.css">
+        <link rel="stylesheet" href="../../css/ul.css">
+        <script src="https://kit.fontawesome.com/f909269b75.js" crossorigin="anonymous"></script>
+        <style>#body {background-color: rgb(255, 60, 0);}</style>
+
+        <!-- SCRIPT -->
+        <script type="text/javascript" src="../../js/onStart.js"></script>
+    </head>
+
+    <body id="body">
+        <div class="intro">
+            <h1>Markdown</h1><hr>
+            <p>Write the content of your <code class="square">.txt</code> file in this textarea.</p>
+            <div class="icons" style="margin-left: auto; margin-right: auto; width: 50%; margin-top: -1;">
+                <textarea id="text" class="textArea" cols="51" rows="10" placeholder="Markdown text to be converted." maxlength="2000"></textarea><br>
+                <button id="convert" class="submit" type="button">Convert</button>
+            </div><br>
+            <div class="icons" style="margin-left: auto; margin-right: auto; width: 50%; margin-top: -1;">
+                <p id="output"></p>
+            </div><br>
+        </div>
+
+        <div class="intro">
+            <div class="madeWith"><p>Made with <b class="heart"><button id="heart" class="submit"><i class="fas fa-sync-alt fa-spin"></i></button></b> and <b>GitHub Pages</b></p></div>
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById('heart').addEventListener('click', function() {
+                document.getElementsByClassName('heart')[0].innerHTML = '&hearts;';
+            })
+        </script>
+
+        <!-- JavaScript to be loaded after the page -->
+        <script type="text/javascript" src="index.js"></script>
+    </body>
+</html>
