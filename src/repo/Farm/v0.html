@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- META -->
+        <meta charset="UTF-8">
+        <meta name="author" content="FLAK-ZOSO">
+        <meta name="keywords" content="HTML, CSS, JavaScript">
+        <meta name="description" content="Farm v0 release notes">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- TITLE -->
+        <title>Farm v0</title>
+
+        <!-- ICONS -->
+        <link rel="icon" type="ico" sizes="32x32" href="../../../img/favicon.ico">
+
+        <!-- STYLE -->
+        <link rel="stylesheet" href="../../css/button.css">
+        <link rel="stylesheet" href="../../css/code.css">
+        <link rel="stylesheet" href="../../css/icons.css">
+        <link rel="stylesheet" href="../../css/paragraph.css">
+        <link rel="stylesheet" href="../../css/ul.css">
+        <script src="https://kit.fontawesome.com/f909269b75.js" crossorigin="anonymous"></script>
+        <style>#body {background-color: rgb(255, 60, 0);}</style>
+
+        <!-- SCRIPT -->
+        <script type="text/javascript" src="../../js/onStart.js"></script>
+    </head>
+
+    <body id="body">
+        <div class="intro">
+            <h1>v0</h1><hr style="margin-left: auto; margin-right: auto; width: 30%;">
+            <p><code class="square">v0</code> is the first <code class="square">major</code> version of <a href="about.html" target="_blank"><code class="square">Farm</code></a></p>
+        </div>
+
+        <div class="intro">
+            <h1>Download</h1><hr>
+            <ul style="width: 40%; margin-left: 41%; display: flex; align-items: center;">
+                <li><code class="square">v0.3.5</code> <button class="download"><a href="https://github.com/FLAK-ZOSO/Farm/archive/refs/tags/v0.3.5.zip" target="_blank"><i class="fab fa-windows"></i></a></button></li>
+                <li><code class="square">v0.4.0</code> <button class="download"><a href="https://github.com/FLAK-ZOSO/Farm/archive/refs/tags/v0.4.0.zip" target="_blank"><i class="fab fa-windows"></i></a></button></li>
+            </ul>
+        </div>
+
+        <div class="intro">
+            <h1>Release notes</h1><hr>
+            <p>Since this is the first version, it has no release notes</p>
+        </div>
+
+        <div class="intro">
+            <h1><code class="square">v0.4.0</code> Release notes <code class="square">12 March 2022</code></h1><hr>
+            <p>Levels are now incrementing with the time passing</p>
+            <p>Every level reached gives <code class="square">+1</code> availability for all the items in the shop</p>
+            <p>You can find the complete changelog <a href="https://github.com/FLAK-ZOSO/Farm/compare/v0.3.5...v0.4.0" target="_blank"><code class="square">here</code></a></p>
+        </div>
+
+        <div class="intro">
+            <div class="madeWith"><p>Made with <b class="heart"><button id="heart" class="submit"><i class="fas fa-sync-alt fa-spin"></i></button></b> and <b>GitHub Pages</b></p></div>
+        </div>
+
+        <script type="text/javascript">
+            document.getElementById('heart').addEventListener('click', function() {
+                document.getElementsByClassName('heart')[0].innerHTML = '&hearts;';
+            })
+        </script>
+    </body>
+</html>
