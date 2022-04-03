@@ -45,7 +45,8 @@ section.bubble {
     border-bottom-right-radius: 50% 20%;
     bottom: 0;
     height: 40%;
-    width: 100%;
+    text-align: center;
+    width: calc(100% - 2px);
 }
 section.bubble p {
     align-self: stretch;
@@ -61,6 +62,20 @@ section.bubble.red h1, section.bubble.red p {
 }
 section.bubble.black h1, section.bubble.black p {
     color: gray;
+}
+
+
+section.bubble#too-long {
+    border-top-left-radius: 50% 10%;
+    border-top-right-radius: 50% 10%;
+    border-bottom-left-radius: 50% 10%;
+    border-bottom-right-radius: 50% 10%;
+}
+section.bubble#too-long div img {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
 }
 
 
@@ -109,6 +124,7 @@ div.curve::after {
 }
 #container1, #container2, #container3, #container4 {
     display: block;
+    text-align: start;
     width: 50%;
 }
 #container4 {
