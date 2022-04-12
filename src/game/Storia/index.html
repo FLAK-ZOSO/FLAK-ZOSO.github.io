@@ -32,6 +32,28 @@
             background: rgb(135,135,135);
             background: linear-gradient(0deg, rgba(135,135,135,0.1260211848411239) 0%, rgba(21,21,21,1) 100%);
         }
+
+        .icon {
+            width: 90%; 
+            border-radius: 10px;
+        }
+        .icon:hover {
+            opacity: 0.7;
+        }
+
+        .pop-up {
+            position: fixed;
+            margin-top: 0%;
+            margin-bottom: 1%;
+            margin-left: 0.5px;
+            margin-right: 0;
+            width: 99%;
+            height: 98%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1;
+            display: none;
+            justify-content: center;
+        }
         </style>
 
         <!-- SCRIPT -->
@@ -43,33 +65,30 @@
             <h1>Benvenuto</h1>
             <p>Grazie a questa pagina imparerai tutto quello che c'è da sapere sui <code class="square">Progressi della Tecnica</code> nel <code class="square">XVI</code> secolo</p>
         </div>
+
+        <div class="intro pop-up">
+            <h1>Sesso</h1>
+        </div>
+
         <div class="intro">
             <p>Il tuo percorso avverrà a tappe, si consiglia l'ordine suggerito qui sotto</p>
             <div id="innovazioni" class="icons" style="width: 40%; margin-left: auto; margin-right: auto;"><br>
                 <div class="intro" style="width: 50%;">
                     <h1>Innovazioni</h1>
                 </div>
-                <a href="" target="_blank">
-                    <img class="icon" style="width: 90%; border-radius: 10px;" src="../../../img/Torcitoio circolare.jpg">
-                </a>
+                <img id="torcitoio" class="icon" role="button" onclick="" src="../../../img/Torcitoio circolare.jpg">
                 <div class="intro" style="width: 50%;">
                     <h1>La Stampa</h1>
                 </div>
-                <a href="" target="_blank">
-                    <img class="icon" style="width: 90%; border-radius: 10px;" src="../../../img/stampa-caratteri-mobili.jpg">
-                </a>
+                <img id="stampa" class="icon" role="button" onclick="" src="../../../img/stampa-caratteri-mobili.jpg">
                 <div class="intro" style="width: 50%;">
                     <h1>Nuove Armi</h1>
                 </div>
-                <a href="" target="_blank">
-                    <img class="icon" style="width: 90%; border-radius: 10px;" src="../../../img/Archibugio.webp">
-                </a>
+                <img id="archibugio" class="icon" role="button" onclick="" src="../../../img/Archibugio.webp">
                 <div class="intro" style="width: 50%;">
                     <h1>Nuovi Eserciti</h1>
                 </div>
-                <a href="" target="_blank">
-                    <img class="icon" style="width: 90%; border-radius: 10px;" src="../../../img/Cannone scozzese.jpg">
-                </a>
+                <img id="cannone" class="icon" role="button" onclick="" src="../../../img/Cannone scozzese.jpg">
             </div><br>
         </div>
 
@@ -78,6 +97,20 @@
             <p>La stampante a caratteri mobili in immagine è stata costruita all'inizio del <code class="square">XIX</code> secolo dalla <a href="https://en.wikipedia.org/wiki/R._Hoe_%26_Company" target="_blank"><code class="square">R. Hoe & Co.</code></a></p>
             <p>Il cannone nell'ultima immagine è denominato <a href="https://luiginardi.wordpress.com/2018/03/14/il-cuore-di-scozia-edimburgo-medievale/" target="_blank"><code class="square">Mons Meg</code></a> ed è stato costruito nel <a href="https://en.wikipedia.org/wiki/Mons_Meg" target="_blank"><code class="square">1449</code></a> in Scozia</p>
         </div>
+
+        <script>
+            Array.from(document.getElementsByClassName('pop-up')).forEach(function(element) {
+                element.addEventListener('click', function() {
+                    window.scrollTo(0, 0);
+                });
+            });
+
+            Array.from(document.getElementsByClassName('icon')).forEach(function(element) {
+                element.addEventListener('click', function() {
+                    `${element.id}_popup`;
+                });
+            });
+        </script>
 
         <div class="madeWith">
             <p>Fatto con <b class="heart"><button id="heart" class="submit"><i class="fas fa-sync-alt fa-spin"></i></button></b> e <b>GitHub Pages</b></p>
