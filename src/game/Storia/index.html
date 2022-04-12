@@ -25,12 +25,18 @@
         <script src="https://kit.fontawesome.com/f909269b75.js" crossorigin="anonymous"></script>
         <style>
         #body { /* https://cssgradient.io/ */
-            background: rgb(255,37,0);
-            background: linear-gradient(234deg, rgba(255,37,0,1) 0%, rgba(255,161,0,1) 100%);        
+            background: rgb(161,88,0);
+            background: linear-gradient(214deg, rgba(161,88,0,0.5555264342064952) 0%, rgba(114,74,0,1) 100%);
         }
         #innovazioni {
             background: rgb(135,135,135);
             background: linear-gradient(0deg, rgba(135,135,135,0.1260211848411239) 0%, rgba(21,21,21,1) 100%);
+        }
+
+        div.icons {
+            width: 40%; 
+            margin-left: auto; 
+            margin-right: auto;
         }
 
         .icon {
@@ -43,16 +49,19 @@
 
         .pop-up {
             position: fixed;
-            margin-top: 0%;
-            margin-bottom: 1%;
-            margin-left: 0.5px;
-            margin-right: 0;
-            width: 99%;
-            height: 98%;
+            margin-top: 0;
+            margin-left: 5%;
+            margin-right: 5%;
+            width: 90%;
+            height: max-content;
             background: rgba(0,0,0,0.9);
             z-index: 1;
             display: none;
             justify-content: center;
+        }
+
+        div.intro p, div.intro h1, div.intro a {
+            color: rgb(161, 88, 0);
         }
         </style>
 
@@ -66,59 +75,56 @@
             <p>Grazie a questa pagina imparerai tutto quello che c'è da sapere sui <code class="square">Progressi della Tecnica</code> nel <code class="square">XVI</code> secolo</p>
         </div>
 
-        <div class="intro pop-up">
-            <h1>Sesso</h1>
+        <div id="torcitoio_popup" class="intro pop-up">
+            <h1>Torcitoio</h1>
         </div>
+
+        <div id="stampa_popup" class="intro pop-up">
+            <h1>Stampa a caratteri mobili</h1>
+            <p>La stampante a caratteri mobili in immagine è stata costruita all'inizio del <code class="square">XIX</code> secolo dalla <a href="https://en.wikipedia.org/wiki/R._Hoe_%26_Company" target="_blank"><code class="square">R. Hoe & Co.</code></a>, ma si ispirava ancora al progetto originale di <code class="square">Gutenberg</code></p>
+        </div>
+
+        <div id="cannone_popup" class="intro pop-up">
+            <h1>Mons Meg</h1>
+            <p>Il cannone in immagine è denominato <a href="https://luiginardi.wordpress.com/2018/03/14/il-cuore-di-scozia-edimburgo-medievale/" target="_blank"><code class="square">Mons Meg</code></a> ed è stato costruito nel <a href="https://en.wikipedia.org/wiki/Mons_Meg" target="_blank"><code class="square">1449</code></a> in Scozia</p>
+        </div>
+
 
         <div class="intro">
             <p>Il tuo percorso avverrà a tappe, si consiglia l'ordine suggerito qui sotto</p>
-            <div id="innovazioni" class="icons" style="width: 40%; margin-left: auto; margin-right: auto;"><br>
-                <div class="intro" style="width: 50%;">
+            <div id="innovazioni" class="icons"><br>
+                <div id="torcitoio_div" class="intro" style="width: 50%;">
                     <h1>Innovazioni</h1>
                 </div>
                 <img id="torcitoio" class="icon" role="button" onclick="" src="../../../img/Torcitoio circolare.jpg">
-                <div class="intro" style="width: 50%;">
+                <div id="stampa_div" class="intro" style="width: 50%;">
                     <h1>La Stampa</h1>
                 </div>
                 <img id="stampa" class="icon" role="button" onclick="" src="../../../img/stampa-caratteri-mobili.jpg">
-                <div class="intro" style="width: 50%;">
+                <div id="archibugio_div" class="intro" style="width: 50%;">
                     <h1>Nuove Armi</h1>
                 </div>
                 <img id="archibugio" class="icon" role="button" onclick="" src="../../../img/Archibugio.webp">
-                <div class="intro" style="width: 50%;">
+                <div id="cannone_div" class="intro" style="width: 50%;">
                     <h1>Nuovi Eserciti</h1>
                 </div>
                 <img id="cannone" class="icon" role="button" onclick="" src="../../../img/Cannone scozzese.jpg">
             </div><br>
         </div>
 
-        <div class="intro">
-            <h1>Note</h1>
-            <p>La stampante a caratteri mobili in immagine è stata costruita all'inizio del <code class="square">XIX</code> secolo dalla <a href="https://en.wikipedia.org/wiki/R._Hoe_%26_Company" target="_blank"><code class="square">R. Hoe & Co.</code></a></p>
-            <p>Il cannone nell'ultima immagine è denominato <a href="https://luiginardi.wordpress.com/2018/03/14/il-cuore-di-scozia-edimburgo-medievale/" target="_blank"><code class="square">Mons Meg</code></a> ed è stato costruito nel <a href="https://en.wikipedia.org/wiki/Mons_Meg" target="_blank"><code class="square">1449</code></a> in Scozia</p>
-        </div>
-
         <script>
-            Array.from(document.getElementsByClassName('pop-up')).forEach(function(element) {
-                element.addEventListener('click', function() {
-                    window.scrollTo(0, 0);
-                });
-            });
-
             Array.from(document.getElementsByClassName('icon')).forEach(function(element) {
                 element.addEventListener('click', function() {
-                    `${element.id}_popup`;
+                    document.getElementById(`${element.id}_div`).scrollIntoView();
+                    document.getElementById(`${element.id}_popup`).style.display = "block";
+                    document.getElementById(`${element.id}_popup`).addEventListener('click', function() {
+                        document.getElementById(`${element.id}_popup`).style.display = "none";
+                    });
+                    document.getElementById(`${element.id}_popup`).removeEventListener('click', function() {
+                        document.getElementById(`${element.id}_popup`).style.display = "none";
+                    });
                 });
             });
-        </script>
-
-        <div class="madeWith">
-            <p>Fatto con <b class="heart"><button id="heart" class="submit"><i class="fas fa-sync-alt fa-spin"></i></button></b> e <b>GitHub Pages</b></p>
-        </div>
-        <script type="text/javascript">
-            document.getElementById('heart').addEventListener('click', function() {
-                document.getElementsByClassName('heart')[0].innerHTML = '&hearts;';
-            })
         </script>
     </body>
 </html>
