@@ -144,11 +144,9 @@
         <script>
             function removePopups() {
                 let popups = Array.from(document.getElementsByClassName('intro'));
-                console.log(popups);
                 popups = popups.filter((value) => {
                     return value.id.includes('_popup') && value.style.display=='block';
                 });
-                console.log(popups);
                 popups.forEach((element) => {
                     element.style.display = 'none';
                 });
@@ -163,13 +161,19 @@
                         let id = element.id;
                         try {
                             document.removeEventListener('scroll', removePopups);
-                            document.getElementById(`${id.replace(id[-1], '')}_div`).scrollIntoView();
+                            document.getElementById(`${id.replace(id[id.length-1], '')}_div`).scrollIntoView();
                             setTimeout(() => {
                                 document.addEventListener('scroll', removePopups);
                             }, 20);
                         } catch (error) {
                             if (!error instanceof TypeError) {
                                 console.error(error);
+                            } else {
+                                document.removeEventListener('scroll', removePopups);
+                                document.getElementById(`${id}_div`).scrollIntoView();
+                                setTimeout(() => {
+                                    document.addEventListener('scroll', removePopups);
+                                }, 20);
                             }
                         }
                         document.getElementById(`${id}_popup`).style.display = "block";
