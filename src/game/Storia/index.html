@@ -28,7 +28,7 @@
             background: rgb(161,88,0);
             background: linear-gradient(214deg, rgba(161,88,0,0.5555264342064952) 0%, rgba(114,74,0,1) 100%);
         }
-        #innovazioni {
+        #innovazioni { /* https://cssgradient.io/ */
             background: rgb(135,135,135);
             background: linear-gradient(0deg, rgba(135,135,135,0.1260211848411239) 0%, rgba(21,21,21,1) 100%);
         }
@@ -86,11 +86,12 @@
         <div id="archibugio_popup" class="intro pop-up">
             <h1>Archibugio</h1>
             <p>Una delle prime armi da fuoco portatili, pesante e poco maneggevole. Si carica con polvere e pallottola di piombo.</p>
-            <p>Quello in immagine è del tipo più antico, ad avancarica, nel quale per l’accensione della carica si usò dapprima carbone acceso e in seguito una bacchetta di ferro arroventata.</p><br>
+            <p>I più antichi erano ad avancarica, per l’accensione si usò dapprima carbone acceso e in seguito una bacchetta di ferro arroventata.</p><br>
             <p>Probabilmente il nome deriva dal basso tedesco <i>haakbuse</i> "canna con dispositivo a uncino per l'accensione", che si modificò in Francia in <i>harquebusche</i> e poi <i>harquebuse</i>; l'italiano <i>archibugio</i>, che deriva dal francese, ha subito l'influenza delle parole arco e bugio "perforato".</p>
             <p>
                 <a href="https://www.treccani.it/vocabolario/archibugio/" target="_blank"><code class="square">[fonte]</code></a>
                 <a href="https://www.treccani.it/enciclopedia/archibugio_%28Enciclopedia-Italiana%29/" target="_blank"><code class="square">[fonte]</code></a>
+                <a href="https://it.wikipedia.org/wiki/Archibugio" target="_blank"><code class="square">[fonte]</code></a>
             </p>
         </div>
 
@@ -107,6 +108,9 @@
         <div id="cannone_popup" class="intro pop-up">
             <h1>Mons Meg</h1>
             <p>Il cannone in immagine è denominato <a href="https://luiginardi.wordpress.com/2018/03/14/il-cuore-di-scozia-edimburgo-medievale/" target="_blank"><code class="square">Mons Meg</code></a> ed è stato costruito nel <a href="https://en.wikipedia.org/wiki/Mons_Meg" target="_blank"><code class="square">1449</code></a> in Scozia</p>
+            <p>Pesa <code class="square">7000 kilogrammi</code>, è lungo <code class="square">4,6 metri</code> e spara proiettili calibro <code class="square">510</code>.</p>
+            <p>Oggi è esposto a <code class="square">Edimburgo</code>, durante il <a href="https://en.wikipedia.org/wiki/Anglo-Scottish_Wars" target="_blank"><code class="square">XVI secolo</code></a> è stato simbolo dell'esercito scozzese in occasione degli scontri con la corona inglese.</p>
+            <p><a href="https://simple.wikipedia.org/wiki/Mons_Meg" target="_blank"><code class="square">[fonte]</code></a></p>
         </div>
 
         <div id="cannone_div_popup" class="intro pop-up">
@@ -114,7 +118,7 @@
             <p>L'arte della guerra smise di essere prerogativa dei nobili, si ebbe una <code class="square">democratizzazione della guerra</code>.</p>
         </div>
 
-        <div class="intro">
+        <div id="main" class="intro">
             <p>Il tuo percorso avverrà a tappe, si consiglia l'ordine suggerito qui sotto</p>
             <div id="innovazioni" class="icons"><br>
                 <div id="torcitoio_div" class="intro" style="width: 50%;">
@@ -133,22 +137,48 @@
                 <div id="cannone_div" class="intro" style="width: 50%;">
                     <h1>Nuovi Eserciti</h1>
                 </div>
-                <img id="cannone" class="icon" role="button" src="../../../img/Cannone scozzese.jpg">
+                <img id="cannone" class="icon" role="button" src="../../../img/MonsMeg.jfif">
             </div><br>
         </div>
 
         <script>
+            function removePopups() {
+                let popups = Array.from(document.getElementsByClassName('intro'));
+                console.log(popups);
+                popups = popups.filter((value) => {
+                    return value.id.includes('_popup') && value.style.display=='block';
+                });
+                console.log(popups);
+                popups.forEach((element) => {
+                    element.style.display = 'none';
+                });
+            }
+            document.getElementsByTagName('body')[0].addEventListener('click', removePopups);
+            
+
             var images = Array.from(document.getElementsByClassName('icon'));
             images.forEach(function(element) {
                 element.addEventListener('click', function() {
-                    document.getElementById(`${element.id}_div`).scrollIntoView();
-                    document.getElementById(`${element.id}_popup`).style.display = "block";
-                    document.getElementById(`${element.id}_popup`).addEventListener('click', function() {
-                        document.getElementById(`${element.id}_popup`).style.display = "none";
-                    });
-                    document.getElementById(`${element.id}_popup`).removeEventListener('click', function() {
-                        document.getElementById(`${element.id}_popup`).style.display = "none";
-                    });
+                    setTimeout(() => {
+                        let id = element.id;
+                        try {
+                            document.removeEventListener('scroll', removePopups);
+                            document.getElementById(`${id.replace(id[-1], '')}_div`).scrollIntoView();
+                            setTimeout(() => {
+                                document.addEventListener('scroll', removePopups);
+                            }, 20);
+                        } catch (error) {
+                            if (!error instanceof TypeError) {
+                                console.error(error);
+                            }
+                        }
+                        document.getElementById(`${id}_popup`).style.display = "block";
+                        function hidePopUp() {
+                            document.getElementById(`${id}_popup`).style.display = "none";
+                            document.getElementById(`${id}_popup`).removeEventListener('click', hidePopUp);
+                        }
+                        document.getElementById(`${id}_popup`).addEventListener('click', hidePopUp);
+                    }, 20);
                 });
             });
 
@@ -158,14 +188,34 @@
             });
             intros.forEach(function(element) {
                 element.addEventListener('click', function() {
-                    document.getElementById(element.id).scrollIntoView();
-                    document.getElementById(`${element.id}_popup`).style.display = "block";
-                    document.getElementById(`${element.id}_popup`).addEventListener('click', function() {
-                        document.getElementById(`${element.id}_popup`).style.display = "none";
-                    });
-                    document.getElementById(`${element.id}_popup`).removeEventListener('click', function() {
-                        document.getElementById(`${element.id}_popup`).style.display = "none";
-                    });
+                    setTimeout(() => {
+                        try {
+                            document.removeEventListener('scroll', removePopups);
+                            element.scrollIntoView();
+                            setTimeout(() => {
+                                document.addEventListener('scroll', removePopups);
+                            }, 20);
+                        } catch (error) {
+                            if (!error instanceof TypeError) {
+                                console.error(error);
+                            } else {
+                                try {
+                                    let i = element.id[-5];
+                                    document.getElementById(`${element.id}${i}_popup`).scrollIntoView();
+                                } catch (error_) {
+                                    if (!error_ instanceof TypeError)
+                                        console.error(error_);
+                                }
+                            }
+                        }
+                        document.getElementById(`${element.id}_popup`).style.display = "block";
+                        document.getElementById(`${element.id}_popup`).addEventListener('click', function() {
+                            document.getElementById(`${element.id}_popup`).style.display = "none";
+                        });
+                        document.getElementById(`${element.id}_popup`).removeEventListener('click', function() {
+                            document.getElementById(`${element.id}_popup`).style.display = "none";
+                        });
+                    }, 20);
                 })
             })
         </script>
