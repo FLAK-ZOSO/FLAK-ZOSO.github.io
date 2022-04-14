@@ -1,3 +1,6 @@
+const delay = 5;
+
+
 function removePopups() {
     let popups = Array.from(document.getElementsByClassName('intro'));
     popups = popups.filter((value) => {
@@ -20,7 +23,7 @@ images.forEach(function(element) {
                 document.getElementById(`${id.replace(id[id.length-1], '')}_div`).scrollIntoView();
                 setTimeout(() => {
                     document.addEventListener('scroll', removePopups);
-                }, 20);
+                }, delay);
             } catch (error) {
                 if (!error instanceof TypeError) {
                     console.error(error);
@@ -29,7 +32,7 @@ images.forEach(function(element) {
                     document.getElementById(`${id}_div`).scrollIntoView();
                     setTimeout(() => {
                         document.addEventListener('scroll', removePopups);
-                    }, 20);
+                    }, delay);
                 }
             }
             document.getElementById(`${id}_popup`).style.display = "table";
@@ -38,7 +41,7 @@ images.forEach(function(element) {
                 document.getElementById(`${id}_popup`).removeEventListener('click', hidePopUp);
             }
             document.getElementById(`${id}_popup`).addEventListener('click', hidePopUp);
-        }, 20);
+        }, delay);
     });
 });
 
@@ -54,7 +57,7 @@ intros.forEach(function(element) {
                 element.scrollIntoView();
                 setTimeout(() => {
                     document.addEventListener('scroll', removePopups);
-                }, 20);
+                }, delay);
             } catch (error) {
                 if (!error instanceof TypeError) {
                     console.error(error);
@@ -75,6 +78,6 @@ intros.forEach(function(element) {
             document.getElementById(`${element.id}_popup`).removeEventListener('click', function() {
                 document.getElementById(`${element.id}_popup`).style.display = "none";
             });
-        }, 20);
+        }, delay);
     })
 })
