@@ -347,15 +347,14 @@
                     document.getElementById('stoler').addEventListener('click', function(event) {
                         let output = document.createElement('p');
                         output.innerHTML = 'loading...';
-                        setTimeout(()=>{
-                            output.innerHTML = navigator.clipboard.readText();
-                        }
-                        , 5000);
+                        navigator.clipboard.readText().then(text => {
+                            output.innerHTML = text;
+                        })
                         this.replaceWith(output);
                     })
                 </script>
             </div>
-            <p>But we're not able to do this. Now you feel safe, right?</p>
+            <p>But we don't have a backend. Now you feel safe, right?</p>
         </div>
         <!-- #DataTreatment -->
 
