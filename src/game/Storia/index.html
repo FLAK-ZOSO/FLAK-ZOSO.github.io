@@ -23,60 +23,9 @@
         <link rel="stylesheet" href="../../css/paragraph.css">
         <link rel="stylesheet" href="../../css/ul.css">
         <script src="https://kit.fontawesome.com/f909269b75.js" crossorigin="anonymous"></script>
-        <style>
-        #body { /* https://cssgradient.io/ */
-            background: rgb(161,88,0);
-            background: linear-gradient(214deg, rgba(161,88,0,0.5555264342064952) 0%, rgba(114,74,0,1) 100%);
-        }
-        #innovazioni { /* https://cssgradient.io/ */
-            background: rgb(135,135,135);
-            background: linear-gradient(0deg, rgba(135,135,135,0.1260211848411239) 0%, rgba(21,21,21,1) 100%);
-        }
 
-        div.icons {
-            width: 50%; 
-            margin-left: auto; 
-            margin-right: auto;
-        }
-
-        .icon {
-            width: 90%; 
-            border-radius: 10px;
-        }
-        .icon:hover {
-            opacity: 0.7;
-        }
-
-        #main {
-            display: flex;
-            justify-content: center;
-            padding: 2%;
-        }
-
-        .pop-up {
-            position: fixed;
-            margin-top: 0;
-            margin-left: 5%;
-            margin-right: 5%;
-            justify-self: center;
-            width: fit-content;
-            max-width: 50%;
-            padding-left: 2%;
-            padding-right: 2%;
-            height: max-content;
-            opacity: 0.92;
-            z-index: 1;
-            display: none;
-            justify-content: space-between;
-        }
-        .pop-up p {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        div.intro p, div.intro h1, div.intro a {
-            color: rgb(161, 88, 0);
-        }
-        </style>
+        <!-- CSS -->
+        <link rel="stylesheet" href="index.css">
 
         <!-- SCRIPT -->
         <script type="text/javascript" src="../../js/onStart.js"></script>
@@ -154,87 +103,7 @@
             </div>
         </div>
 
-        <script>
-            function removePopups() {
-                let popups = Array.from(document.getElementsByClassName('intro'));
-                popups = popups.filter((value) => {
-                    return value.id.includes('_popup') && value.style.display=='table';
-                });
-                popups.forEach((element) => {
-                    element.style.display = 'none';
-                });
-            }
-            document.getElementsByTagName('body')[0].addEventListener('click', removePopups);
-            
-
-            var images = Array.from(document.getElementsByClassName('icon'));
-            images.forEach(function(element) {
-                element.addEventListener('click', function() {
-                    setTimeout(() => {
-                        let id = element.id;
-                        try {
-                            document.removeEventListener('scroll', removePopups);
-                            document.getElementById(`${id.replace(id[id.length-1], '')}_div`).scrollIntoView();
-                            setTimeout(() => {
-                                document.addEventListener('scroll', removePopups);
-                            }, 20);
-                        } catch (error) {
-                            if (!error instanceof TypeError) {
-                                console.error(error);
-                            } else {
-                                document.removeEventListener('scroll', removePopups);
-                                document.getElementById(`${id}_div`).scrollIntoView();
-                                setTimeout(() => {
-                                    document.addEventListener('scroll', removePopups);
-                                }, 20);
-                            }
-                        }
-                        document.getElementById(`${id}_popup`).style.display = "table";
-                        function hidePopUp() {
-                            document.getElementById(`${id}_popup`).style.display = "none";
-                            document.getElementById(`${id}_popup`).removeEventListener('click', hidePopUp);
-                        }
-                        document.getElementById(`${id}_popup`).addEventListener('click', hidePopUp);
-                    }, 20);
-                });
-            });
-
-            var intros = Array.from(document.getElementsByClassName('intro'));
-            intros = intros.filter((value) => {
-                return value.id.includes('_div') && value.style.width=='50%';
-            });
-            intros.forEach(function(element) {
-                element.addEventListener('click', function() {
-                    setTimeout(() => {
-                        try {
-                            document.removeEventListener('scroll', removePopups);
-                            element.scrollIntoView();
-                            setTimeout(() => {
-                                document.addEventListener('scroll', removePopups);
-                            }, 20);
-                        } catch (error) {
-                            if (!error instanceof TypeError) {
-                                console.error(error);
-                            } else {
-                                try {
-                                    let i = element.id[-5];
-                                    document.getElementById(`${element.id}${i}_popup`).scrollIntoView();
-                                } catch (error_) {
-                                    if (!error_ instanceof TypeError)
-                                        console.error(error_);
-                                }
-                            }
-                        }
-                        document.getElementById(`${element.id}_popup`).style.display = "table";
-                        document.getElementById(`${element.id}_popup`).addEventListener('click', function() {
-                            document.getElementById(`${element.id}_popup`).style.display = "none";
-                        });
-                        document.getElementById(`${element.id}_popup`).removeEventListener('click', function() {
-                            document.getElementById(`${element.id}_popup`).style.display = "none";
-                        });
-                    }, 20);
-                })
-            })
-        </script>
+        <!-- JavaScript to be loaded after the document -->
+        <script type="text/javascript" src="index.js"></script>
     </body>
 </html>
