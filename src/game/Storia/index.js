@@ -20,7 +20,7 @@ images.forEach(function(element) {
             let id = element.id;
             try {
                 document.removeEventListener('scroll', removePopups);
-                document.getElementById(`${id.replace(id[id.length-1], '')}_div`).scrollIntoView();
+                // document.getElementById(`${id.replace(id[id.length-1], '')}_div`).scrollIntoView();
                 setTimeout(() => {
                     document.addEventListener('scroll', removePopups);
                 }, delay);
@@ -29,7 +29,7 @@ images.forEach(function(element) {
                     console.error(error);
                 } else {
                     document.removeEventListener('scroll', removePopups);
-                    document.getElementById(`${id}_div`).scrollIntoView();
+                    // document.getElementById(`${id}_div`).scrollIntoView();
                     setTimeout(() => {
                         document.addEventListener('scroll', removePopups);
                     }, delay);
@@ -54,7 +54,7 @@ intros.forEach(function(element) {
         setTimeout(() => {
             try {
                 document.removeEventListener('scroll', removePopups);
-                element.scrollIntoView();
+                // element.scrollIntoView();
                 setTimeout(() => {
                     document.addEventListener('scroll', removePopups);
                 }, delay);
@@ -64,7 +64,7 @@ intros.forEach(function(element) {
                 } else {
                     try {
                         let i = element.id[-5];
-                        document.getElementById(`${element.id}${i}_popup`).scrollIntoView();
+                        // document.getElementById(`${element.id}${i}_popup`).scrollIntoView();
                     } catch (error_) {
                         if (!error_ instanceof TypeError)
                             console.error(error_);
