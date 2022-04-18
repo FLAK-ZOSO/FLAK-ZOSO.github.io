@@ -47,7 +47,7 @@ images.forEach(function(element) {
 
 var intros = Array.from(document.getElementsByClassName('intro'));
 intros = intros.filter((value) => {
-    return value.id.includes('_div') && value.style.width=='50%';
+    return value.id.includes('_div') && value.style.width=='95%';
 });
 intros.forEach(function(element) {
     element.addEventListener('click', function() {
