@@ -29,6 +29,7 @@ div.icons {
 
 .pop-up {
     position: fixed;
+    top: 10%;
     margin-top: 0;
     margin-left: 5%;
     margin-right: 5%;
