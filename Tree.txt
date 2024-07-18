@@ -1,67 +1,95 @@
 FLAK-ZOSO.github.io/
-|
-├── src/
-│   ├── js/
-|   |    ├── checkWidth.js
-|   |    ├── copyToCache.js
-|   |    ├── div.js
-|   |    ├── dropdown.js
-|   |    ├── importerHTML.js
-|   |    ├── onStart.js
-|   |    ├── openLink.js
-|   |    ├── sendEmail.js
-|   |    ├── setWidth.js
-|   |    └── sidebar.js
-│   |
-│   ├── css/
-|   |    ├── button.css
-|   |    ├── code.css
-|   |    ├── icons.css
-|   |    ├── input.css
-|   |    ├── mobile.css
-|   |    ├── paragraph.css
-|   |    └── sidebar.css
-|   |    
-│   ├── scss/
-|   |    └── code.scss
-|   |
-|   ├── .htaccess
-|   ├── email.html
-|   ├── index.html
-|   ├── mobile.html
-|   |
-|   ├── game/
-|   |     └── Click.html
-|   |
-|   └── repo/
-|         ├── Markdown/
-|         |     ├── about.html
-|         |     ├── v1.0.0.html
-|         |     └── v2.0.0.html
-|         |
-|         ├── Prompt/
-|         |     ├── about.html
-|         |     ├── v1.0.0.html
-|         |     └── v1.1.0.html
-|         |
-|         └── Tris/
-|               └── about.html
-|   
-├── img/
-|    ├── CMD run.png
-|    ├── CMD run v1.1.0.png
-|    ├── favicon.ico
-|    ├── background.png
-|    ├── HTML5.ico
-|    ├── HTML5.png
-|    ├── JavaScript-logo.ico
-|    ├── JavaScript-logo.png
-|    ├── Markdown.png
-|    ├── JavaScript-logo.png
-|    ├── Python-logo.ico
-|    ├── Python-logo.png
-|    ├── Tris game.png
-|    └── Windows-logo.ico
-|
-├── Tree.txt
-└── index.html
+├── img
+│   ├── 20230614_182718.jpg
+│   ├── Anemometro.jpg
+│   ├── Archibugio.webp
+│   ├── background.png
+│   ├── Cannone scozzese.jpg
+│   ├── C++-logo.ico
+│   ├── C++-logo.png
+│   ├── CMD run.png
+│   ├── CMD run v1.1.0.png
+│   ├── Da Vinci logo.ico
+│   ├── Da Vinci macchina volante.jpg
+│   ├── favicon.ico
+│   ├── Forsiktig record.png
+│   ├── HTML5.ico
+│   ├── HTML5.png
+│   ├── JavaScript-logo.ico
+│   ├── JavaScript-logo.png
+│   ├── Labirint v1.0.0.png
+│   ├── Labirint v2.0.0.png
+│   ├── Labirint v2.3.0.png
+│   ├── Markdown result.png
+│   ├── Markdown result v2.2.0.png
+│   ├── MonsMeg.jfif
+│   ├── Pingroo v1.2.1 options.png
+│   ├── Pingroo v1.2.1.png
+│   ├── Prompt run 1.2.0.png
+│   ├── Python-logo.ico
+│   ├── Python-logo.png
+│   ├── Sista.png
+│   ├── stampa-caratteri-mobili.jpg
+│   ├── Torcitoio circolare disegno.jpg
+│   ├── Torcitoio circolare.jpg
+│   ├── Tris game.png
+│   └── Windows-logo.ico
+├── index.html
+├── src
+│   ├── 404.html
+│   ├── css
+│   │   ├── button.css
+│   │   ├── code.css
+│   │   ├── icons.css
+│   │   ├── input.css
+│   │   ├── login.css
+│   │   ├── mobile.css
+│   │   ├── paragraph.css
+│   │   ├── sidebar.css
+│   │   ├── spoiler.css
+│   │   └── ul.css
+│   ├── game
+│   │   ├── click.html
+│   │   ├── Markdown
+│   │   │   ├── classes.css
+│   │   │   ├── classes.js
+│   │   │   ├── index.html
+│   │   │   └── index.js
+│   │   └── Storia
+│   │       ├── index.css
+│   │       ├── index.html
+│   │       └── index.js
+│   ├── index.html
+│   ├── js
+│   │   ├── checkWidth.js
+│   │   ├── copyToCache.js
+│   │   ├── div.js
+│   │   ├── dropdown.js
+│   │   ├── importerHTML.js
+│   │   ├── onStart.js
+│   │   ├── openLink.js
+│   │   ├── sendEmail.js
+│   │   ├── setWidth.js
+│   │   ├── sidebar.js
+│   │   └── spoiler.js
+│   ├── mobile.html
+│   └── repo
+│       ├── Farm
+│       │   ├── about.html
+│       │   └── v0.html
+│       ├── Forsiktig
+│       │   └── about.html
+│       ├── Labirint
+│       │   ├── about.html
+│       │   ├── v1.0.0.html
+│       │   ├── v2.0.0.html
+│       │   ├── v3.0.0.html
+│       │   └── v4.0.0.html
+│       ├── Markdown
+│       │   ├── about.html
+│       │   └── v2.0.0.html
+│       ├── Sista
+│       │   └── about.html
+│       └── Tris
+│           └── about.html
+└── Tree.txt
