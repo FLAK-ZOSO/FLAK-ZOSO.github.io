@@ -93,5 +93,15 @@
                 document.getElementsByClassName('heart')[0].innerHTML = '&hearts;';
             })
         </script>
+
+        <!-- Check page width -->
+        <script>
+            function checkWidth() {
+                if (window.screen.width < 600)
+                    window.location.href = 'mobile.html';
+            }
+            window.addEventListener('load', checkWidth);
+            window.addEventListener('resize', checkWidth);
+        </script>
     </body>
 </html>
