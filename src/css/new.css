@@ -1,0 +1,83 @@
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    background-color: #111;
+    color: #f0f0f0;
+}
+section {
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 5em;
+}
+i {
+    font-size: 2em;
+}
+h2 {
+    text-align: center;
+    font-size: 3em;
+    margin: 0;
+}
+h2#social-header {
+    font-size: 2em;
+}
+p, a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f0f0f0;
+}
+li {
+    font-size: 1.1em;
+}
+img#resume, img#medal {
+    display: block;
+    /*scale: 30%;*/
+    margin: 0;
+    border-radius: 40% 40% 40% 40%;
+}
+
+div.social {
+    /*display: flex;*/
+}
+div.social a {
+    margin-right: 1em;
+    font-size: 1.8em;
+}
+div.social p.fa, div.social p.fa-brands {
+    margin: 15px 15px 15px 1em;
+    font-size: 2.5em;
+}
+div.social a {
+    text-underline: transparent;
+}
+
+header {
+    justify-content: center;
+    align-self: center;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin: auto;
+}
+div#information-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1em;
+}
+div#information-group i {
+    margin: 15px;
+    font-size: 2em;
+}
+div#information-group p {
+    margin: 15px;
+    font-size: 1.3em;
+}
