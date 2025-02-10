@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <!-- META -->
+        <meta charset="UTF-8">
+        <meta name="author" content="FLAK-ZOSO">
+        <meta name="description" content="Main page">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <!-- TITLE -->
+        <title>FLAK-ZOSO</title>
+
+        <!-- ICONS -->
+        <link rel="icon" type="ico" sizes="32x32" href="../img/favicon.ico">
+
+        <!-- Style -->
+        <link rel="stylesheet" type="text/css" href="css/paragraph.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- CSS -->
+        <style>
+            body {
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f0f0f0;
+                color: #333;
+            }
+            p {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            li {
+                font-size: 1.1em;
+            }
+        </style>
+
+        <!-- JavaScript -->
+        <script src="https://kit.fontawesome.com/f909269b75.js" crossorigin="anonymous"></script>
+
+        <!-- jQuery -->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    </head>
+
+    <body>
+        <h1>FLAK-ZOSO</h1><hr>
+
+        <!-- Section about social accounts -->
+        <section id="social">
+            <h2>Social</h2>
+            <!-- <p>Here are some of my social accounts...</p> -->
+            <ul>
+                <li><a href="https://github.com/FLAK-ZOSO">GitHub</a></li>
+                <li><a href="https://stackoverflow.com/users/15888601/flak-zoso">Stack Overflow</a></li>
+                <li><a href="https://profile.codersrank.io/user/flak-zoso">CodersRank</a></li>
+                <li><a href="https://discordapp.com/users/797844636281995274">Discord</a></li>
+                <li><a href="https://www.facebook.com/profile.php?id=61562063493496">Facebook</a></li>
+            </ul>
+        </section><hr>
+
+        <!-- Section about repositories -->
+        <section id="repositories">
+            <h2>Repositories</h2>
+            <p>On my <a href="https://github.com/FLAK-ZOSO">GitHub profile</a> you can find all my public repositories, here are some of them...</p>
+            <ul>
+                <li><a href="https://github.com/FLAK-ZOSO/Sista">Sista</a></li>
+                <li><a href="https://github.com/Lioydiano/Forsiktig">Forsiktig</a></li>
+                <li><a href="https://github.com/Lioydiano/Classeviva">Classeviva.py</a>
+                <li><a href="https://github.com/Lioydiano/Dodas">Dodas</a></li>
+                <li><a href="https://github.com/Lioydiano/Starklag">Starklag</a></li>
+                <li><a href="https://github.com/FLAK-ZOSO/OliCyberUCT">OliCyberUCT</a></li>
+            </ul>
+        </section><hr>
+
+        <!-- Section about this website -->
+        <section id="website">
+            <h2>This website</h2>
+            <p>Here is the <a href="https://github.com/FLAK-ZOSO/FLAK-ZOSO.github.io">source code</a> of this website.
+            I wanted to make it minimal because the previous design was both cringe and eye-hurting.</p>
+            <p>Here are some random pages...</p>
+            <ul>
+                <li><a href="game/Markdown/index.html">Markdown to HTML</a></li>
+                <li><a href="game/Storia/index.html">An history project</a></li>
+            </ul>
+        </section><hr>
+
+        <!-- Made With ❤️ and GitHub Pages -->
+        <div class="madeWith">
+            <p>Made with <b class="heart"><button id="heart" class="submit"><i class="fas fa-sync-alt fa-spin"></i></button></b> and <b>GitHub Pages</b></p>
+        </div>
+        <script type="text/javascript">
+            document.getElementById('heart').addEventListener('click', function() {
+                document.getElementsByClassName('heart')[0].innerHTML = '&hearts;';
+            })
+        </script>
+
+        <!-- Check page width -->
+        <script>
+            function checkWidth() {
+                if (window.screen.width < 600)
+                    window.location.href = 'mobile.html';
+            }
+            window.addEventListener('load', checkWidth);
+            window.addEventListener('resize', checkWidth);
+        </script>
+    </body>
+</html>
