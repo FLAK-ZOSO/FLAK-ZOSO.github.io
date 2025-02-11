@@ -60,7 +60,9 @@ div.social a {
 
 header {
     justify-content: center;
+    -webkit-justify-content: center;
     align-self: center;
+    -webkit-align-self: center;
     display: flex;
     flex-direction: row;
     gap: 50px;
@@ -71,6 +73,7 @@ div#information-group {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    -webkit-justify-content: center;
     gap: 1em;
 }
 div#information-group i {
