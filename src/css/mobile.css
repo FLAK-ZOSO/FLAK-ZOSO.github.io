@@ -29,6 +29,30 @@ section {
     align-items: center;
     min-height: 200px;
 }
+section#intro div#social {
+    display: flex;
+    flex-direction: column;
+}
+section#intro div#social > ul {
+    list-style-type: none;
+    list-style-position: inside;
+    padding-left: 0;
+}
+section#intro div#social p.fa, section#intro div#social p.fa-brands {
+    margin-right: 10%;
+    margin-left: 10%;
+}
+section#intro div#social a {
+    align-self: center;
+}
+section#intro div#social li {
+    display: flex;
+    width: 100%;
+}
+section#intro > div {
+    display: flex;
+    width: 50%;
+}
 section.black {
     background-color: black;
     color: gray;
@@ -44,7 +68,8 @@ section.bubble {
     border-bottom-left-radius: 50% 20%;
     border-bottom-right-radius: 50% 20%;
     bottom: 0;
-    height: 40%;
+    height: fit-content;
+    padding-bottom: 5vh;
     text-align: center;
     width: calc(100% - 2px);
 }
@@ -53,7 +78,7 @@ section.bubble p {
     display: flex;
     font-weight: 500;
     justify-content: space-around;
-    margin-bottom: 10%;
+    /*margin-bottom: 10%;*/
     margin-left: 9vw;
     margin-right: 9vw;
 }
@@ -117,41 +142,30 @@ div.curve::after {
 
 
 
-#container1 {
+#social {
     margin-top: 2vh;
     border-top-left-radius: 20px; 
     border-top-right-radius: 20px;
-}
-#container1, #container2, #container3, #container4 {
-    display: block;
-    text-align: start;
-    width: 50%;
-}
-#container4 {
+
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     margin-bottom: 2vh;
 }
-
-
-/* CSS coming from https://shapedivider.app */
-/*
-.custom-shape-divider-bottom-1643376318 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-.custom-shape-divider-bottom-1643376318 svg {
-    position: relative;
+#container1, #container2, #container3, #social {
     display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
+    text-align: start;
+    width: 50%;
 }
-.custom-shape-divider-bottom-1643376318 .shape-fill {
-    fill: #FFFFFF;
+#container1 {
+    margin-top: 2vh;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin-bottom: 2vh;
 }
-*/
+#container1 a {
+    text-decoration: none;
+    color: gray;
+}
